@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<class>
+  <class_name>
+    <p>Power Puff</p>
+  </class_name>
+  <class_list>
+       <student>
+
+           <name>Robert</name>
+           <grade>A+</grade>
+       </student>
+
+       <student>
+           <name>Lenard</name>
+           <grade>A-</grade>
+       </student>
+       <student>
+        <grade>F</grade>
+      </student>
+  </class_list>
+  <teacher_list>
+      <teacher>
+        <lastname>Smith</lastname>
+        <alma_mater>Boston College</alma_mater>
+      </teacher>
+      <teacher>
+        <lastname>Kim</lastname>
+        <alma_mater>Columbia</alma_mater>
+      </teacher>
+  </teacher_list>
+</class>
