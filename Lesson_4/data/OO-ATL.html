@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The state information is invalid for this page and might be corrupted.</title>
+        <meta name="viewport" content="width=device-width" />
+        <style>
+         body {font-family:"Verdana";font-weight:normal;font-size: .7em;color:black;} 
+         p {font-family:"Verdana";font-weight:normal;color:black;margin-top: -5px}
+         b {font-family:"Verdana";font-weight:bold;color:black;margin-top: -5px}
+         H1 { font-family:"Verdana";font-weight:normal;font-size:18pt;color:red }
+         H2 { font-family:"Verdana";font-weight:normal;font-size:14pt;color:maroon }
+         pre {font-family:"Consolas","Lucida Console",Monospace;font-size:11pt;margin:0;padding:0.5em;line-height:14pt}
+         .marker {font-weight: bold; color: black;text-decoration: none;}
+         .version {color: gray;}
+         .error {margin-bottom: 10px;}
+         .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
+         @media screen and (max-width: 639px) {
+          pre { width: 440px; overflow: auto; white-space: pre-wrap; word-wrap: break-word; }
+         }
+         @media screen and (max-width: 479px) {
+          pre { width: 280px; }
+         }
+        </style>
+    </head>
+
+    <body bgcolor="white">
+
+            <span><H1>Server Error in '/' Application.<hr width=100% size=1 color=silver></H1>
+
+            <h2> <i>The state information is invalid for this page and might be corrupted.</i> </h2></span>
+
+            <font face="Arial, Helvetica, Geneva, SunSans-Regular, sans-serif ">
+
+            <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+
+            <br><br>
+
+            <b> Exception Details: </b>System.Web.HttpException: The state information is invalid for this page and might be corrupted.<br><br>
+
+            <b>Source Error:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code>
+
+The source code that generated this unhandled exception can only be shown when compiled in debug mode. To enable this, please follow one of the below steps, then request the URL:<br><br>1. Add a &quot;Debug=true&quot; directive at the top of the file that generated the error. Example:<br><br> &nbsp;&nbsp;&lt;%@ Page Language=&quot;C#&quot; Debug=&quot;true&quot; %&gt;<br><br>or:<br><br>2) Add the following section to the configuration file of your application:<br><br>&lt;configuration&gt;<br> &nbsp;&nbsp;&nbsp;&lt;system.web&gt;<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;compilation debug=&quot;true&quot;/&gt;<br> &nbsp;&nbsp;&nbsp;&lt;/system.web&gt;<br>&lt;/configuration&gt;<br><br> Note that this second technique will cause all files within a given application to be compiled in debug mode. The first technique will cause only that particular file to be compiled in debug mode.<br><br>Important: Running applications in debug mode does incur a memory/performance overhead. You should make sure that an application has debugging disabled before deploying into production scenario.</code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <b>Stack Trace:</b> <br><br>
+
+            <table width=100% bgcolor="#ffffcc">
+               <tr>
+                  <td>
+                      <code><pre>
+
+[FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. ]
+   System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength) +11414963
+   System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength) +71
+   System.Convert.FromBase64String(String s) +42
+   System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose) +66
+   System.Web.UI.ObjectStateFormatter.System.Web.UI.IStateFormatter2.Deserialize(String serializedState, Purpose purpose) +13
+   System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose) +40
+   System.Web.UI.HiddenFieldPageStatePersister.Load() +126
+
+[ViewStateException: Invalid viewstate. 
+	Client IP: 204.68.194.7
+	Port: 19158
+	Referer: 
+	Path: /Data_Elements.aspx
+	User-Agent: python-requests/2.12.3
+	ViewState: /wEPDwULLTE3NTUzNjYzMDUPFg4eB3N0ckNvbm4FWlByb3ZpZGVyPS5ORVQgRnJhbWV3b3JrIERhdGEgUHJvdmlkZXIgZm9yIE9EQkM7RFNOPUVuZGVhdm91cjt1aWQ9d2VidXNlcjtwd2Q9IVdlYnVzZXIxMjM0Ox4FTUxpc3QFswEnQVRMJywnQldJJywnQk9TJywnQ0xUJywnTURXJywnT1JEJywnREFMJywnREZXJywnREVOJywnRFRXJywnRkxMJywnSUFIJywnTEFTJywnTEFYJywnTUlBJywnTVNQJywnSkZLJywnTEdBJywnRVdSJywnTUNPJywnUEhMJywnUEhYJywnUERYJywnU0xDJywnU0FOJywnU0ZPJywnU0VBJywnVFBBJywnRENBJywnSUFEJx4MQWlycG9ydF9OYW1lBQ1BbGwgQWlycG9ydHMgHgZIZWFkZXIFB0ZsaWdodHMeCVNlbGVjdGlvbgUcQWxsIENhcnJpZXJzIC0gQWxsIEFpcnBvcnRzIB4EVW5pdGUeBlNvdXJjZQVDPEJSPlNPVVJDRTogQnVyZWF1IG9mIFRyYW5zcG9ydGF0aW9uIFN0YXRpc3RpY3MgVC0xMDAgU2VnbWVudCBkYXRhLhYGAgEPDxYCHgRUZXh0BQdGbGlnaHRzZGQCAg8PFgIfBwUcQWxsIENhcnJpZXJzIC0gQWxsIEFpcnBvcnRzIGRkAgMPZBYUAgEPEA8WAh4UQXBwZW5kRGF0YUJvdW5kSXRlbXNnZA8WEmYCAQICAgMCBAIFAgYCBwIIAgkCCgILAgwCDQIOAg8CEAIRFhIQBR1BbGwgVS5TLiBhbmQgRm9yZWlnbiBDYXJyaWVycwUDQWxsZxAFEUFsbC...]
+
+[HttpException (0x80004005): The state information is invalid for this page and might be corrupted.]
+   System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError) +116
+   System.Web.UI.HiddenFieldPageStatePersister.Load() +265
+   System.Web.UI.Page.LoadPageStateFromPersistenceMedium() +251
+   System.Web.UI.Page.LoadAllState() +41
+   System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +6211
+   System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint) +245
+   System.Web.UI.Page.ProcessRequest() +72
+   System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context) +22
+   System.Web.UI.Page.ProcessRequest(HttpContext context) +58
+   ASP.data_elements_aspx.ProcessRequest(HttpContext context) +37
+   System.Web.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +188
+   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously) +69
+</pre></code>
+
+                  </td>
+               </tr>
+            </table>
+
+            <br>
+
+            <hr width=100% size=1 color=silver>
+
+            <b>Version Information:</b>&nbsp;Microsoft .NET Framework Version:4.0.30319; ASP.NET Version:4.6.1087.0
+
+            </font>
+
+    </body>
+</html>
+<!-- 
+[FormatException]: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+   at System.Convert.FromBase64_ComputeResultLength(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at System.Web.UI.ObjectStateFormatter.Deserialize(String inputString, Purpose purpose)
+   at System.Web.UI.ObjectStateFormatter.System.Web.UI.IStateFormatter2.Deserialize(String serializedState, Purpose purpose)
+   at System.Web.UI.Util.DeserializeWithAssert(IStateFormatter2 formatter, String serializedState, Purpose purpose)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+[ViewStateException]: Invalid viewstate. 
+	Client IP: 204.68.194.7
+	Port: 19158
+	Referer: 
+	Path: /Data_Elements.aspx
+	User-Agent: python-requests/2.12.3
+	ViewState: /wEPDwULLTE3NTUzNjYzMDUPFg4eB3N0ckNvbm4FWlByb3ZpZGVyPS5ORVQgRnJhbWV3b3JrIERhdGEgUHJvdmlkZXIgZm9yIE9EQkM7RFNOPUVuZGVhdm91cjt1aWQ9d2VidXNlcjtwd2Q9IVdlYnVzZXIxMjM0Ox4FTUxpc3QFswEnQVRMJywnQldJJywnQk9TJywnQ0xUJywnTURXJywnT1JEJywnREFMJywnREZXJywnREVOJywnRFRXJywnRkxMJywnSUFIJywnTEFTJywnTEFYJywnTUlBJywnTVNQJywnSkZLJywnTEdBJywnRVdSJywnTUNPJywnUEhMJywnUEhYJywnUERYJywnU0xDJywnU0FOJywnU0ZPJywnU0VBJywnVFBBJywnRENBJywnSUFEJx4MQWlycG9ydF9OYW1lBQ1BbGwgQWlycG9ydHMgHgZIZWFkZXIFB0ZsaWdodHMeCVNlbGVjdGlvbgUcQWxsIENhcnJpZXJzIC0gQWxsIEFpcnBvcnRzIB4EVW5pdGUeBlNvdXJjZQVDPEJSPlNPVVJDRTogQnVyZWF1IG9mIFRyYW5zcG9ydGF0aW9uIFN0YXRpc3RpY3MgVC0xMDAgU2VnbWVudCBkYXRhLhYGAgEPDxYCHgRUZXh0BQdGbGlnaHRzZGQCAg8PFgIfBwUcQWxsIENhcnJpZXJzIC0gQWxsIEFpcnBvcnRzIGRkAgMPZBYUAgEPEA8WAh4UQXBwZW5kRGF0YUJvdW5kSXRlbXNnZA8WEmYCAQICAgMCBAIFAgYCBwIIAgkCCgILAgwCDQIOAg8CEAIRFhIQBR1BbGwgVS5TLiBhbmQgRm9yZWlnbiBDYXJyaWVycwUDQWxsZxAFEUFsbC...
+[HttpException]: The state information is invalid for this page and might be corrupted.
+   at System.Web.UI.ViewStateException.ThrowError(Exception inner, String persistedState, String errorPageMessage, Boolean macValidationError)
+   at System.Web.UI.HiddenFieldPageStatePersister.Load()
+   at System.Web.UI.Page.LoadPageStateFromPersistenceMedium()
+   at System.Web.UI.Page.LoadAllState()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.data_elements_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+--><!-- 
+This error page might contain sensitive information because ASP.NET is configured to show verbose error messages using &lt;customErrors mode="Off"/&gt;. Consider using &lt;customErrors mode="On"/&gt; or &lt;customErrors mode="RemoteOnly"/&gt; in production environments.-->
